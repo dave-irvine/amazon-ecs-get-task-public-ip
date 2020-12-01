@@ -1,0 +1,13 @@
+name: 'Amazon ECS "Get Task Public IP" Action for GitHub Actions'
+description: 'Gets the public IP address of a task'
+inputs:
+  cluster:
+    description: "The short name or full Amazon Resource Name (ARN) of the cluster that hosts the task. If you do not specify a cluster, the default cluster is assumed."
+    required: false
+    default: 'default'
+  task-arn:
+    description: "The task ID or full Amazon Resource Name (ARN) of the task to get the public IP of."
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
