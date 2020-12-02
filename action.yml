@@ -8,6 +8,9 @@ inputs:
   task-arn:
     description: "The task ID or full Amazon Resource Name (ARN) of the task to get the public IP of."
     required: true
+outputs:
+  public-ip:
+    description: 'The public IP of the task'
 runs:
   using: 'node12'
   main: 'dist/index.js'
